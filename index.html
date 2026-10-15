@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Status Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">⚡ OpsMonitor</div>
+    <div class="environment-badge badge-prod">Environment: Production</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Infrastructure Health & Deployment Hub</h1>
+      <p class="subtitle">Live system overview managed via Git version control and hosted on Nginx.</p>
+    </section>
+
+    <section class="grid">
+      <!-- Status Card 1 -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Web Server</h3>
+          <span class="status-indicator status-online">Operational</span>
+        </div>
+        <p class="card-detail"><strong>Service:</strong> Nginx 1.24</p>
+        <p class="card-detail"><strong>Port:</strong> 80 (HTTP)</p>
+        <p class="card-detail"><strong>Uptime:</strong> 99.98%</p>
+      </div>
+
+      <!-- Status Card 2 -->
+      <div class="card">
+        <div class="card-header">
+          <h3>App Gateway</h3>
+          <span class="status-indicator status-online">Operational</span>
+        </div>
+        <p class="card-detail"><strong>Latency:</strong> 24ms</p>
+        <p class="card-detail"><strong>SSL/TLS:</strong> Configured</p>
+        <p class="card-detail"><strong>Firewall:</strong> UFW Active</p>
+      </div>
+
+      <!-- Status Card 3 -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Build & Release</h3>
+          <span class="status-indicator status-idle">Ready</span>
+        </div>
+        <p class="card-detail"><strong>Source:</strong> GitHub Main</p>
+        <p class="card-detail"><strong>Deployment:</strong> Manual Pull</p>
+        <p class="card-detail"><strong>Revision:</strong> v1.0.0</p>
+      </div>
+    </section>
+
+    <section class="deployment-info">
+      <h2>Server Metadata</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Status</th>
+              <th>Responsible User</th>
+              <th>Log Path</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nginx Core</td>
+              <td>Running</td>
+              <td>deployer</td>
+              <td><code>/var/log/nginx/access.log</code></td>
+            </tr>
+            <tr>
+              <td>Static Assets</td>
+              <td>Mounted</td>
+              <td>www-data</td>
+              <td><code>/var/www/devops-project/</code></td>
+            </tr>
+            <tr>
+              <td>System Health</td>
+              <td>Normal</td>
+              <td>root</td>
+              <td><code>/var/log/syslog</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>OpsMonitor Dashboard &bull; Maintained with Git & Nginx on Linux</p>
+  </footer>
+
+</body>
+</html>
